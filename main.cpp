@@ -1,6 +1,6 @@
 ﻿//----------------------------------
 //
-//  ASCII PHYSICS GAME - ENHANCED EDITION
+//  ASCII PHYSICS GAME
 //  HUZAIFA ZAKI - FA25-BSAI-0051
 //  UMAR SAEED - FA25-BSAI-0065
 //
@@ -211,7 +211,7 @@ char currentLetter = 0;
 int stickmanIntact = 1;
 int currentHangmanStage = 0;
 
-// Enhanced variables
+// variables
 GameStats gameStats;
 GameState undoStates[MAX_UNDO_STATES];
 int currentUndoIndex = 0;
@@ -224,7 +224,7 @@ float cursorSpeedMultiplier = CURSOR_SPEED_NORMAL;
 
 // Shop variables
 ShopItem shopItems[MAX_SHOP_ITEMS];
-int currentHeadIndex = 0;  // 0 is default head
+int currentHeadIndex = 0; 
 int shopSelection = 0;
 int shopPage = 0;
 int itemsPerPage = 6;
@@ -2442,7 +2442,7 @@ void ShowMainMenu(HANDLE hOut) {
     startX = (WIDTH - len) / 2;
     for (int j = 0; j < len && j < WIDTH; j++) PutChar(startX + j, startY + 4, title5[j], COLOR_BRIGHT_CYAN);
 
-    char subtitle[] = "ASCII Physics Game - Enhanced Edition | by Huzaifa & Umar";
+    char subtitle[] = "ASCII Physics Game | by Huzaifa & Umar";
     int subLen = (int)strlen(subtitle);
     int subX = (WIDTH - subLen) / 2;
     for (int i = 0; i < subLen; i++) PutChar(subX + i, startY + 7, subtitle[i], COLOR_BRIGHT_YELLOW);
@@ -2661,7 +2661,7 @@ int main() {
     cursorInfo.bVisible = 0;
     SetConsoleCursorInfo(hOut, &cursorInfo);
 
-    system("title ASCII Physics Game - Enhanced Edition");
+    system("title ASCII Physics Game");
 
     // Initialize systems
     InitInputManager();
